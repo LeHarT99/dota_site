@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link, Routes, Route } from 'react-router-dom'
 
-const HeroCard = ({ image }) => {
+const HeroCard = ({ image, heroId }) => {
   return (
-    <div>
-      <a href="!#"><img src={image} alt="" width="150px" /></a>
-    </div>
+
+    <Link to={`/${heroId}`}>
+      <img src={image} alt="" width="150px" />
+    </Link>
   )
 }
 
