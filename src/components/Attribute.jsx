@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Attribute = ({ src }) => {
+const Attribute = ({ src, onClick }) => {
     return (
         <div>
-            <img src={src} alt="" width="75%"/>
+            <button className='p-1' onClick={onClick}><img src={src} alt="" width="75%"/></button>
         </div>
     )
 }

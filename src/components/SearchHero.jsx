@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 
-const SearchHero = () => {
+const SearchHero = ({ searchHero }) => {
+
+  const [search, setSearch] = useState("");
+  const inputRef = useRef();
+
+  const onSearch = () => {
+    setSearch(inputRef.current.value)
+    searchHero(search);
+  }
+
   return (
     <div>
-        <input type="text" placeholder='Search hero by name' className='bg-gray-700 text-white p-2 rounded'/>
+      <input ref={inputRef} type="text" placeholder='Search hero by name' onChange={onSearch} />
     </div>
   )
 }
