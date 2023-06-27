@@ -67,7 +67,7 @@ function App() {
 
         <Routes>
           {heroes.map(hero => (
-            <Route key={hero.id} path={`/${hero.id}`} element={<HeroStats key={hero.id} heroes={heroes} heroId={hero.id} />} />
+            <Route key={heroes.indexOf(hero)} path={`/${heroes.indexOf(hero)}`} element={<HeroStats key={heroes.indexOf(hero)} heroes={heroes} heroIndex={heroes.indexOf(hero)} />} />
           ))}
 
           <Route path='/' exact element={(
@@ -79,9 +79,9 @@ function App() {
                   <Attribute src={agi} onClick={(e) => { setHeroAttr("agi"); setHeroes(heroesCopy) }} />
                   <Attribute src={int} onClick={(e) => { setHeroAttr("int"); setHeroes(heroesCopy) }} />
                   <Attribute src={all} onClick={(e) => { setHeroAttr("all"); setHeroes(heroesCopy) }} />
-                  <div className='text-white self-center text-3xl cursor-pointer' onClick={(e) => { setHeroAttr(""); setHeroes(heroesCopy); }}>
+                  {/* <div className='text-white self-center text-3xl cursor-pointer' onClick={(e) => { setHeroAttr(""); setHeroes(heroesCopy); }}>
                     X
-                  </div>
+                  </div> */}
                 </div>
 
                 <input type="text" placeholder='Search hero by name' className='bg-gray-700 text-white p-2 rounded' onChange={(e) => setSearchHero(e.target.value)} />
@@ -94,7 +94,7 @@ function App() {
 
                   <div className='flex flex-wrap p-8 bg-slate-400 bg-opacity-25 justify-center space-x-1 w-[90%] mx-auto'>
                     {heroes.map(hero => (
-                      <HeroCard key={hero.id} heroId={hero.id} image={`https://api.opendota.com${hero.img}`} />
+                      <HeroCard key={heroes.indexOf(hero)} heroIndex={heroes.indexOf(hero)} image={`https://api.opendota.com${hero.img}`} />
                       // <h4 key={hero.id} className='text-white'>{hero.localized_name}</h4>
                     ))}
                   </div>}

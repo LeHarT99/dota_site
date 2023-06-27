@@ -1,5 +1,8 @@
 import React from 'react'
 import Attribute from './Attribute'
+import HeroCard from './HeroCard'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 import str from "../assets/img/hero_strength.svg"
 import agi from "../assets/img/hero_agility.svg"
 import int from "../assets/img/hero_intelligence.svg"
@@ -12,9 +15,11 @@ import magicRes from "../assets/img/icons/icon_magic_resist.png"
 import vision from "../assets/img/icons/icon_vision.png"
 import movSpd from "../assets/img/icons/icon_movement_speed.png"
 
-const HeroStats = ({ heroes, heroId }) => {
+const HeroStats = ({ heroes, heroIndex }) => {
 
-  const hero = heroes.filter(hero => hero.id === heroId).pop();
+  const hero = heroes[heroIndex];
+  const previousHero = heroes[heroIndex - 1];
+  const nextHero = heroes[heroIndex + 1];
 
   return (
     <>
@@ -47,8 +52,8 @@ const HeroStats = ({ heroes, heroId }) => {
         </div>
 
         <div className='text-white'>
-          {hero.roles.map(role => (
-            <p>{role}</p>
+          {hero.roles.map((role, index) => (
+            <p key={index}>{role}</p>
           ))}
         </div>
 
@@ -101,10 +106,23 @@ const HeroStats = ({ heroes, heroId }) => {
         </div>
 
         <div className='text-white text-4xl'>
-          <p>Previous</p>
-          <p>All heroes</p>
-          <p>Next</p>
+
+          {!(previousHero === undefined) &&
+            <div>
+              <p>Previous</p>
+              <HeroCard key={heroes.indexOf(hero)} heroIndex={heroIndex - 1} image={`https://api.opendota.com${previousHero.img}`} />
+            </div>}
+
+          <Link to={'/'}><p>All heroes</p></Link>
+
+          {!(nextHero === undefined) &&
+            <div>
+              <p>Next</p>
+              <HeroCard key={heroes.indexOf(hero)} heroIndex={heroIndex + 1} image={`https://api.opendota.com${nextHero.img}`} />
+            </div>}
+
         </div>
+
 
       </div>
     </>
