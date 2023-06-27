@@ -88,9 +88,9 @@ function App() {
 
               </div>
 
-              {isLoading ? <h1 className='text-white text-6xl text-center mt-4'>Loading...</h1> :
+              {isLoading ? <h1 className='text-white text-2xl text-center mt-4 animate-ping flex self-center md:text-4xl lg:text-5xl'>Loading...</h1> :
 
-                heroes.length === 0 ? <h1 className='text-6xl text-white text-center mt-4'>No heroes found...</h1> :
+                heroes.length === 0 ? <h1 className='text-2xl text-white text-center mt-4 md:text-4xl lg:text-5xl'>No heroes found...</h1> :
 
                   <div className='flex flex-wrap p-8 bg-slate-400 bg-opacity-25 justify-center space-x-1 w-[90%] mx-auto'>
                     {heroes.map(hero => (
