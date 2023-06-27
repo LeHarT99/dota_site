@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Routes, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const HeroCard = ({ image, heroIndex }) => {
   return (

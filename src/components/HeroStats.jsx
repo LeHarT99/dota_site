@@ -1,7 +1,7 @@
 import React from 'react'
 import Attribute from './Attribute'
 import HeroCard from './HeroCard'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import str from "../assets/img/hero_strength.svg"
 import agi from "../assets/img/hero_agility.svg"
