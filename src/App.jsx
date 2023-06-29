@@ -63,17 +63,17 @@ function App() {
   return (
     <Router>
       <div className='flex flex-col justify-center my-4'>
-        <img src={logo} alt="" className='self-center mb-4' width="35%" />
+        <img src={logo} alt="" className='self-center mb-4 w-[50%] sm:w-[35%]' width="35%" />
 
         <Routes>
-          {heroes.map(hero => (
-            <Route key={heroes.indexOf(hero)} path={`/${heroes.indexOf(hero)}`} element={<HeroStats key={heroes.indexOf(hero)} heroes={heroes} heroIndex={heroes.indexOf(hero)} />} />
+          {heroesCopy.map(hero => (
+            <Route key={heroesCopy.indexOf(hero)} path={`/${heroesCopy.indexOf(hero)}`} element={<HeroStats key={heroesCopy.indexOf(hero)} heroes={heroesCopy} heroIndex={heroesCopy.indexOf(hero)} />} />
           ))}
 
           <Route path='/' exact element={(
 
             <>
-              <div className='flex w-[90%] justify-between mx-auto items-center'>
+              <div className='flex flex-col space-y-3 w-[90%] mb-2 justify-between mx-auto items-center sm:flex-row sm:mb-0'>
                 <div className='flex p-3 bg-gray-700 space-x-3'>
                   <Attribute src={str} onClick={(e) => { setHeroAttr("str"); setHeroes(heroesCopy) }} />
                   <Attribute src={agi} onClick={(e) => { setHeroAttr("agi"); setHeroes(heroesCopy) }} />
@@ -94,7 +94,7 @@ function App() {
 
                   <div className='flex flex-wrap p-8 bg-slate-400 bg-opacity-25 justify-center space-x-1 w-[90%] mx-auto'>
                     {heroes.map(hero => (
-                      <HeroCard key={heroes.indexOf(hero)} heroIndex={heroes.indexOf(hero)} image={`https://api.opendota.com${hero.img}`} />
+                      <HeroCard key={heroesCopy.indexOf(hero)} heroIndex={heroesCopy.indexOf(hero)} image={`https://api.opendota.com${hero.img}`} />
                       // <h4 key={hero.id} className='text-white'>{hero.localized_name}</h4>
                     ))}
                   </div>}
@@ -102,8 +102,6 @@ function App() {
             </>
           )} />
         </Routes>
-
-
       </div >
     </Router>
   );
