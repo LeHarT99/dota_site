@@ -63,6 +63,7 @@ function App() {
   return (
     <Router>
       <div className='flex flex-col justify-center my-4'>
+        
         <img src={logo} alt="" className='self-center mb-4 w-[50%] sm:w-[35%]' width="35%" />
 
         <Routes>
@@ -74,7 +75,7 @@ function App() {
 
             <>
               <div className='flex flex-col space-y-3 w-[90%] mb-2 justify-between mx-auto items-center sm:flex-row sm:mb-0'>
-                <div className='flex p-3 bg-gray-700 space-x-3'>
+                <div className='flex p-3 bg-gray-700 space-x-3 rounded md:rounded-t-lg md:rounded-b-none'>
                   <Attribute src={str} onClick={(e) => { setHeroAttr("str"); setHeroes(heroesCopy) }} />
                   <Attribute src={agi} onClick={(e) => { setHeroAttr("agi"); setHeroes(heroesCopy) }} />
                   <Attribute src={int} onClick={(e) => { setHeroAttr("int"); setHeroes(heroesCopy) }} />
