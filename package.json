@@ -2,6 +2,7 @@
   "name": "dota_site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lehart99.github.io/dota_site",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,7 +18,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/input.css -o src/assets/App.css --watch"
+    "build:css": "postcss src/assets/input.css -o src/assets/App.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +42,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "tailwindcss": "^3.3.2"

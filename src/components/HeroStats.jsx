@@ -14,6 +14,8 @@ import range from "../assets/img/icons/icon_attack_range.png"
 import magicRes from "../assets/img/icons/icon_magic_resist.png"
 import vision from "../assets/img/icons/icon_vision.png"
 import movSpd from "../assets/img/icons/icon_movement_speed.png"
+import sun from "../assets/img/icons/icon_sun.ico"
+import moon from "../assets/img/icons/icon_moon.ico"
 
 const HeroStats = ({ heroes, heroIndex }) => {
 
@@ -24,106 +26,125 @@ const HeroStats = ({ heroes, heroIndex }) => {
   return (
     <>
 
-      <img src={`https://api.opendota.com${hero.img}`} alt="" width="150px" />
-
-      <h1 className='text-white text-6xl'>{hero.localized_name}</h1>
-
-      <div className='flex text-white'>
-
-        <div className=''>
-          <span>{hero.base_str}</span>
-          <Attribute src={str} />
-          <span className='text-2xl text-white'>+ {hero.str_gain}
-          </span>
-        </div>
+      <div className='flex flex-col items-center p-8'>
 
         <div>
-          <span>{hero.base_agi}</span>
-          <Attribute src={agi} />
-          <span className='text-2xl text-white'>+ {hero.agi_gain}
-          </span>
+          <img src={`https://api.opendota.com${hero.img}`} alt="" width="200px" className='mx-auto rounded' />
+          <h1 className='text-white text-5xl text-center my-2'>{hero.localized_name}</h1>
         </div>
 
-        <div>
-          <span>{hero.base_int}</span>
-          <Attribute src={int} />
-          <span className='text-2xl text-white'>+ {hero.int_gain}
-          </span>
-        </div>
+        <div className='flex text-white bg-slate-400 bg-opacity-40 w-[90%] p-4 justify-around rounded flex-col md:flex-row space-y-4 md:space-y-0'>
 
-        <div className='text-white'>
-          {hero.roles.map((role, index) => (
-            <p key={index}>{role}</p>
-          ))}
-        </div>
+          <div className='flex flex-col flex-grow items-center justify-around flex-wrap'>
 
-        <div className='text-white'>
-          <div>
-            Attack
-
-            <div>
-              <img src={attack} alt="" />
-              <span>{hero.base_attack_min} - {hero.base_attack_max}</span>
+            <div className='flex items-center'>
+              <Attribute src={str} />
+              <span className='mr-2 text-2xl'>{hero.base_str}</span>
+              <span className='text-2xl text-white'>+{parseFloat(hero.str_gain).toFixed(1)}
+              </span>
             </div>
 
-            <div>
-              <img src={range} alt="" />
-              <span>{hero.attack_range}</span>
+            <div className='flex items-center'>
+              <Attribute src={agi} />
+              <span className='mr-2 text-2xl'>{hero.base_agi}</span>
+              <span className='text-2xl text-white'>+{parseFloat(hero.agi_gain).toFixed(1)}
+              </span>
             </div>
 
-          </div>
-          <div>
-            Defense
-
-            <div>
-              <img src={armor} alt="" />
-              <span>{hero.base_armor}</span>
+            <div className='flex items-center'>
+              <Attribute src={int} />
+              <span className='mr-2 text-2xl'>{hero.base_int}</span>
+              <span className='text-2xl text-white'>+{parseFloat(hero.int_gain).toFixed(1)}
+              </span>
             </div>
-
-            <div>
-              <img src={magicRes} alt="" />
-              <span>{hero.base_mr}%</span>
-            </div>
-
-          </div>
-          <div>
-            Mobility
-
-            <div>
-              <img src={movSpd} alt="" />
-              <span>{hero.move_speed}</span>
-            </div>
-
-            <div>
-              <img src={vision} alt="" />
-              <span>Day vision:{hero.day_vision}</span>
-              <br />
-              <span>Night vision:{hero.night_vision}</span>
-            </div>
-
           </div>
 
+          <div className='text-white flex flex-col flex-grow items-center'>
+            <h4 className='text-2xl font-bold mb-2'>Roles</h4>
+            <ul className='flex md:space-y-2 space-x-4 md:space-x-0 md:flex-col flex-wrap justify-center'>
+              {hero.roles.map((role, index) => (
+                <li key={index} className='font-semibold'>{role}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className='text-white flex flex-grow justify-around flex-wrap'>
+            <div className='flex flex-col space-y-4'>
+              <h4 className='text-2xl font-bold mb-2'>Attack</h4>
+
+              <div className='flex space-x-2 items-center'>
+                <img src={attack} alt="" />
+                <span className='text-lg'>{hero.base_attack_min} - {hero.base_attack_max}</span>
+              </div>
+
+              <div className='flex space-x-2 items-center'>
+                <img src={range} alt="" />
+                <span className='text-lg'>{hero.attack_range}</span>
+              </div>
+
+            </div>
+
+            <div className='flex flex-col space-y-4'>
+              <h4 className='text-2xl font-bold mb-2'>Defense</h4>
+
+              <div className='flex space-x-2 items-center'>
+                <img src={armor} alt="" />
+                <span className='text-lg'>{parseFloat(hero.base_armor).toFixed(1)}</span>
+              </div>
+
+              <div className='flex space-x-2 items-center'>
+                <img src={magicRes} alt="" />
+                <span className='text-lg'>{hero.base_mr} %</span>
+              </div>
+
+            </div>
+
+            <div className='flex flex-col space-y-4'>
+              <h4 className='text-2xl font-bold mb-2'>Mobility</h4>
+
+              <div className='flex space-x-2 items-center'>
+                <img src={movSpd} alt="" />
+                <span className='text-lg'>{hero.move_speed}</span>
+              </div>
+
+              <div className='items-center space-y-2 space-x-2 flex'>
+
+                <img src={vision} alt="" />
+
+                <div className='text-lg'>
+                  <span className='flex space-x-1'>
+                    <img src={sun} alt="" className='w-[30px]' />
+                    <p className='self-center'>{hero.day_vision}</p>
+                  </span>
+                  <span className='flex space-x-1'>
+                    <img src={moon} alt="" className='w-[30px]' />
+                    <p className='self-center'>{hero.night_vision}</p>
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
         </div>
 
-        <div className='text-white text-4xl'>
+        <div className='text-white text-4xl flex w-4/5 justify-evenly flex-col space-y-5 mt-8 md:mt-20 md:flex-row md:space-y-0'>
 
           {!(previousHero === undefined) &&
-            <div>
-              <p>Previous</p>
+            <div className='mx-auto'>
               <HeroCard key={heroes.indexOf(hero)} heroIndex={heroIndex - 1} image={`https://api.opendota.com${previousHero.img}`} />
+              <p className='text-center mt-2 md:mt-4'>Previous</p>
             </div>}
 
-          <Link to={'/'}><p>All heroes</p></Link>
+          <Link to={'/'} className='text-5xl self-center md:self-start'>All heroes</Link>
 
           {!(nextHero === undefined) &&
-            <div>
-              <p>Next</p>
+            <div className='mx-auto'>
               <HeroCard key={heroes.indexOf(hero)} heroIndex={heroIndex + 1} image={`https://api.opendota.com${nextHero.img}`} />
+              <p className='text-center mt-2 md:mt-4'>Next</p>
             </div>}
 
         </div>
-
-
       </div>
     </>
   )
