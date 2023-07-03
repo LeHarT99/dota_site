@@ -683,6 +683,7 @@ body {
     background-image: url('img/radiant_dire.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .hover\:scale-150:hover {
