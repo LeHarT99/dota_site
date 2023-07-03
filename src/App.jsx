@@ -61,6 +61,14 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [heroAttr]);
 
+  useEffect(() => {
+    if (heroes.length === 0) document.body.style.height = '100vh';
+
+    else{
+      document.body.style.height = '';
+    }
+  }, [heroes]);
+
   return (
     <Router>
       <div className='flex flex-col justify-center my-4'>
@@ -93,9 +101,9 @@ function App() {
               {isLoading ? <div className='mx-auto'><img src={spinner} alt="" width="200px" className='animate-spin' /></div> :
 
                 // heroes.length === 0 ? <h1 className='text-2xl text-white text-center mt-4 md:text-4xl lg:text-5xl'>No heroes found...</h1> :
-                heroes.length === 0 ? <div className='mt-4'><img src={notFoundImg} alt="" width="50%" className='mx-auto' /></div> :
+                heroes.length === 0 ? <div className='mt-4 w-[70%] md:w-[50%] mx-auto'><img src={notFoundImg} alt="" className='object-contain' /></div> :
 
-                  <div className='flex flex-wrap p-8 bg-slate-400 bg-opacity-25 justify-center space-x-1 w-[90%] mx-auto'>
+                  <div className={`flex flex-wrap p-8 bg-slate-400 bg-opacity-25 justify-center space-x-1 w-[90%] mx-auto`}>
                     {heroes.map(hero => (
                       <HeroCard key={heroesCopy.indexOf(hero)} heroIndex={heroesCopy.indexOf(hero)} image={`https://api.opendota.com${hero.img}`} />
                       // <h4 key={hero.id} className='text-white'>{hero.localized_name}</h4>

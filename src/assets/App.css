@@ -505,6 +505,12 @@ video {
 .flex {
   display: flex;
 }
+.h-\[\] {
+  height: ;
+}
+.h-\[100vh\] {
+  height: 100vh;
+}
 .w-4\/5 {
   width: 80%;
 }
@@ -516,6 +522,15 @@ video {
 }
 .w-\[90\%\] {
   width: 90%;
+}
+.w-\[\] {
+  width: ;
+}
+.w-\[60\%\] {
+  width: 60%;
+}
+.w-\[70\%\] {
+  width: 70%;
 }
 .flex-grow {
   flex-grow: 1;
@@ -616,6 +631,9 @@ video {
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
+.object-contain {
+  object-fit: contain;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -683,7 +701,13 @@ body {
     background-image: url('img/radiant_dire.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-position: center;
+}
+
+@media (max-width: 584px) {
+    body{
+        margin-bottom: 90px;
+    }
 }
 
 .hover\:scale-150:hover {
@@ -725,6 +749,14 @@ body {
 
   .md\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .md\:w-\[\] {
+    width: ;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
   }
 
   .md\:flex-row {

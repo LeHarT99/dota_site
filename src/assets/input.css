@@ -6,5 +6,11 @@ body {
     background-image: url('img/radiant_dire.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-position: center;
+}
+
+@media (max-width: 584px) {
+    body{
+        margin-bottom: 90px;
+    }
 }
