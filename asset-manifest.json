@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dota_site/static/css/main.ada57f0b.css",
+    "main.js": "/dota_site/static/js/main.e43870f4.js",
+    "static/js/787.fb49c0d8.chunk.js": "/dota_site/static/js/787.fb49c0d8.chunk.js",
+    "static/media/radiant_dire.svg": "/dota_site/static/media/radiant_dire.d3263769538cd60ca701.svg",
+    "static/media/icon_moon.ico": "/dota_site/static/media/icon_moon.417e0945e217ef35f048.ico",
+    "static/media/icon_sun.ico": "/dota_site/static/media/icon_sun.bea893d1ab35188faf22.ico",
+    "static/media/hero_notfound.svg": "/dota_site/static/media/hero_notfound.79ed1b0f71261fb837e97e53bedbeb4c.svg",
+    "static/media/dota_footer_logo.svg": "/dota_site/static/media/dota_footer_logo.33808825a0424ed51c04dce25e60fb02.svg",
+    "static/media/hero_intelligence.svg": "/dota_site/static/media/hero_intelligence.56d8a44a399b615e6c155a55be82f134.svg",
+    "static/media/hero_agility.svg": "/dota_site/static/media/hero_agility.339080a74a68fc91e105a1fb5c7468d3.svg",
+    "static/media/hero_universal.svg": "/dota_site/static/media/hero_universal.818275fb4b73536a68c3b77733edc3ad.svg",
+    "static/media/hero_strength.svg": "/dota_site/static/media/hero_strength.b768de35a5934cc5cb5ebac21a1eceee.svg",
+    "static/media/invoker_spinner.svg": "/dota_site/static/media/invoker_spinner.a57c5d92bc65b6b639d2668f7d7bac4b.svg",
+    "index.html": "/dota_site/index.html",
+    "main.ada57f0b.css.map": "/dota_site/static/css/main.ada57f0b.css.map",
+    "main.e43870f4.js.map": "/dota_site/static/js/main.e43870f4.js.map",
+    "787.fb49c0d8.chunk.js.map": "/dota_site/static/js/787.fb49c0d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ada57f0b.css",
+    "static/js/main.e43870f4.js"
+  ]
+}

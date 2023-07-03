@@ -1,0 +1,39 @@
+<svg width="525" height="504" viewBox="0 0 525 504" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_11_3)">
+<g clip-path="url(#clip1_11_3)">
+<path d="M13.5629 328.655C58.5559 462.926 205.802 537.263 344.533 496.951C223.437 531.956 66.2374 475.458 29.7561 366.588C-7.32765 255.92 93.3348 133.102 216.237 94.3751C242.574 86.0764 256.986 58.6453 248.428 33.1067C239.87 7.56799 211.583 -6.40808 185.247 1.89056C44.7873 46.151 -32.0786 192.449 13.5629 328.655Z" fill="url(#paint0_linear_11_3)"/>
+</g>
+<g clip-path="url(#clip2_11_3)">
+<path d="M453.535 413.984C548.077 306.62 536.49 146.033 428.551 52.3983C522.609 134.227 555.081 293.72 478.424 380.774C400.501 469.265 239.914 450.219 141.64 368.842C120.581 351.405 88.9317 353.823 70.9495 374.244C52.9672 394.665 55.4612 425.356 76.5199 442.794C188.834 535.795 357.629 522.896 453.535 413.984Z" fill="url(#paint1_linear_11_3)"/>
+</g>
+<g clip-path="url(#clip3_11_3)">
+<path d="M313.731 20.8162C171.351 -8.67043 31.2526 77.6848 -2.25075 214.315C27.1573 95.1441 156.319 -8.49955 271.763 15.4089C389.115 39.7122 448.319 185.714 421.329 308.266C415.546 334.527 432.811 360.363 459.892 365.971C486.973 371.58 513.615 354.837 519.399 328.576C550.243 188.517 458.163 50.7279 313.731 20.8162Z" fill="url(#paint2_linear_11_3)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_11_3" x1="13.5507" y1="328.619" x2="313.744" y2="228.027" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FABF53" stop-opacity="0.14"/>
+<stop offset="1" stop-color="#F2AC2B"/>
+</linearGradient>
+<linearGradient id="paint1_linear_11_3" x1="453.509" y1="414.013" x2="218.308" y2="206.901" gradientUnits="userSpaceOnUse">
+<stop stop-color="#949CFC" stop-opacity="0.13"/>
+<stop offset="1" stop-color="#3684FF"/>
+</linearGradient>
+<linearGradient id="paint2_linear_11_3" x1="313.769" y1="20.8242" x2="251.239" y2="322.759" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EC29C0" stop-opacity="0.12"/>
+<stop offset="1" stop-color="#F099F8"/>
+</linearGradient>
+<clipPath id="clip0_11_3">
+<rect width="525" height="504" fill="white"/>
+</clipPath>
+<clipPath id="clip1_11_3">
+<rect width="310.173" height="316.985" fill="white" transform="matrix(-0.317727 -0.948182 0.95377 -0.300537 29.5504 376.366)"/>
+</clipPath>
+<clipPath id="clip2_11_3">
+<rect width="313.346" height="313.868" fill="white" transform="matrix(-0.660871 0.750499 -0.770217 -0.637782 487.129 375.834)"/>
+</clipPath>
+<clipPath id="clip3_11_3">
+<rect width="318.479" height="308.692" fill="white" transform="matrix(0.979221 0.202796 -0.21508 0.976596 263.139 10.3386)"/>
+</clipPath>
+</defs>
+</svg>
