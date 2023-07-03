@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dota_site/static/css/main.ada57f0b.css",
-    "main.js": "/dota_site/static/js/main.e43870f4.js",
+    "main.js": "/dota_site/static/js/main.76ca2f73.js",
     "static/js/787.fb49c0d8.chunk.js": "/dota_site/static/js/787.fb49c0d8.chunk.js",
     "static/media/radiant_dire.svg": "/dota_site/static/media/radiant_dire.d3263769538cd60ca701.svg",
     "static/media/icon_moon.ico": "/dota_site/static/media/icon_moon.417e0945e217ef35f048.ico",
@@ -15,11 +15,11 @@
     "static/media/invoker_spinner.svg": "/dota_site/static/media/invoker_spinner.a57c5d92bc65b6b639d2668f7d7bac4b.svg",
     "index.html": "/dota_site/index.html",
     "main.ada57f0b.css.map": "/dota_site/static/css/main.ada57f0b.css.map",
-    "main.e43870f4.js.map": "/dota_site/static/js/main.e43870f4.js.map",
+    "main.76ca2f73.js.map": "/dota_site/static/js/main.76ca2f73.js.map",
     "787.fb49c0d8.chunk.js.map": "/dota_site/static/js/787.fb49c0d8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ada57f0b.css",
-    "static/js/main.e43870f4.js"
+    "static/js/main.76ca2f73.js"
   ]
 }
