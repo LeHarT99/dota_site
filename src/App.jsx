@@ -8,7 +8,7 @@ import Attribute from './components/Attribute';
 import spinner from './assets/img/icons/invoker_spinner.svg'
 import notFoundImg from './assets/img/hero_notfound.svg'
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import HeroCard from './components/HeroCard';
 import HeroStats from './components/HeroStats';
