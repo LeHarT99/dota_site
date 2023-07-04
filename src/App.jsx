@@ -61,14 +61,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [heroAttr]);
 
-  useEffect(() => {
-    if (heroes.length === 0) document.body.style.height = '100vh';
-
-    else{
-      document.body.style.height = '';
-    }
-  }, [heroes]);
-
   return (
     <Router>
       <div className='flex flex-col justify-center my-4'>
