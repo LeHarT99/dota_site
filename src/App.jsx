@@ -26,6 +26,7 @@ function App() {
     fetch("https://api.opendota.com/api/heroStats")
       .then(heroes => heroes.json())
       .then(heroes => {
+        heroes.sort((a, b) => a.localized_name.localeCompare(b.localized_name));
         setHeroes(heroes);
         setHeroesCopy(heroes);
         setLoading(false);
